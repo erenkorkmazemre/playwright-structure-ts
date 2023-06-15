@@ -1,0 +1,17 @@
+{
+  "name": "playwright_merge_fl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx playwright test",
+    "start:ui": "npx playwright test --ui"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.35.1"
+  }
+}
