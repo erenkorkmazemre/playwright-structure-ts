@@ -28,6 +28,5 @@ export async function sigIn(username: string, password: string) {
     await this.signIn.click();
 }
 
-
 //export default {login, sigIn};
 
