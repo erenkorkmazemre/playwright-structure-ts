@@ -4,7 +4,7 @@ import { defineConfig, devices } from '@playwright/test';
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// require('dotenv').config();
+require('dotenv').config();
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -37,7 +37,8 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
+      /** It will be open when you want to try multiple browsers **/
+/*    {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
@@ -45,7 +46,7 @@ export default defineConfig({
     {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
-    },
+    },*/
 
     /* Test against mobile viewports. */
     // {
