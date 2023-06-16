@@ -14,10 +14,12 @@ test('Login into Test', async ({ page }) => {
 })*/
 import {Page} from '@playwright/test';
 
-export async function login(
-    page: Page
+export async function goTo(
+    page: Page,
+    url: string
 ): Promise<void> {
-    await page.goto('https://practicetestautomation.com/practice-test-login/');
+    console.log(url)
+    await page.goto(url);
 }
 
 export async function sigIn(username: string, password: string) {
