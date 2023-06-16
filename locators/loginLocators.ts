@@ -1,3 +1,5 @@
 export const LOGIN = {
-    SUBMIT_BUTTON: '(//button[text()="Submit"])'
+    USERNAME: '(//input[@name="username"])',
+    PASSWORD: '(//input[@name="password"])',
+    SUBMIT_BUTTON: '(//button[@type="submit"])'
 };

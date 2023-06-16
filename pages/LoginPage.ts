@@ -18,7 +18,6 @@ export async function goTo(
     page: Page,
     url: string
 ): Promise<void> {
-    console.log(url)
     await page.goto(url);
 }
 

@@ -1,25 +1,50 @@
 import {expect, test} from '@playwright/test'
-import {goTo, sigIn} from "../../pages/LoginPage";
-import {click} from "../../pages/CommonPage";
+import {goTo} from "../../pages/LoginPage";
+import {click, fillTheInput} from "../../pages/CommonPage";
 import {LOGIN} from "../../locators/loginLocators";
+import {faker} from "@faker-js/faker";
+import {User} from "../types/User";
 
-test.describe('Eren', () => {
-    test('Login into Test', async ({page}) => {
-        // Go to login page
-        //await page.goto('https://practicetestautomation.com/practice-test-login/')
+test.describe('Try to login then check failure and success', async () => {
+    test('Login with success', async ({page}) => {
         await goTo(page, process.env.URL)
-        //await sigIn(process.env.USERNAME, process.env.PASSWORD)
-        // Fill in credentials
-        await page.getByLabel('Username').type(process.env.USERNAME)
-        await page.getByLabel('Password').type(process.env.PASSWORD)
-        //await page.click('(//button[text()="Submit"])')
-        await click(page, LOGIN.SUBMIT_BUTTON)
-        await expect(page.locator('(//div[@id="error"])')).toHaveText('Your username is invalid!');
+        await fillTheInput('Fill the username input', page, LOGIN.USERNAME, process.env.USERNAME)
+        await fillTheInput('Fill the password input', page, LOGIN.PASSWORD, process.env.PASSWORD)
+        await click('Click the submit input', page, LOGIN.SUBMIT_BUTTON)
+        await expect(page).toHaveURL('https://franchise.develop.getirapi.com/map/live')
+        /** Under the below includes API request && response process **/
+        const response = await page.request.post('https://franchise-api-gateway.development.getirapi.com/auth/login', {
+            data: {
+                username: process.env.USERNAME,
+                password: process.env.PASSWORD,
+            }
+        });
+        const userData: User = <User>await response.json();
+        console.log(response.json().then(res => console.log(res.refreshToken)))
+        console.log(userData.refreshToken)
+        console.log(userData.accessToken)
 
-        await page.getByLabel('Username').type(process.env.USERNAME_CORRECT)
-        await page.getByLabel('Password').type(process.env.PASSWORD_CORRECT)
-        await page.click('(//button[text()="Submit"])')
-        await expect(page.locator('(//h1[text()="Logged In Successfully"])')).toHaveText('Logged In Successfully');
+    })
+
+    test('Login with failure', async ({page}) => {
+        const username = faker.internet.userName() + faker.random.numeric(2);
+        const password = faker.internet.password();
+        const response = await page.request.post('https://franchise-api-gateway.development.getirapi.com/auth/login', {
+            data: {
+                username: username,
+                password: password,
+            }
+        });
+        await goTo(page, process.env.URL)
+        await fillTheInput('Fill the username input', page, LOGIN.USERNAME, username)
+        await fillTheInput('Fill the password input', page, LOGIN.PASSWORD, password)
+        await click('Click the submit button', page, LOGIN.SUBMIT_BUTTON)
+        await expect(response).not.toBeOK();
+        /** Under the below includes API request && response process **/
+        const userData: User = <User>await response.json();
+        console.log(response.json().then(res => console.log(res.refreshToken)))
+        console.log(userData.refreshToken)
+        console.log(userData.accessToken)
     })
 });
 
