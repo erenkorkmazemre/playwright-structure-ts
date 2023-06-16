@@ -5,7 +5,6 @@ test('Login into Test', async ({page}) => {
     // Go to login page
     //await page.goto('https://practicetestautomation.com/practice-test-login/')
     await login(page)
-
     await sigIn(process.env.USERNAME, process.env.PASSWORD)
     // Fill in credentials
     await page.getByLabel('Username').type(process.env.USERNAME)
