@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "npx playwright test",
-    "start:ui": "npx playwright test --ui"
+    "start:ui": "npx playwright test --ui",
+    "start:ui:debug": "npx playwright test --ui --debug",
+    "start:login:debug": "npx playwright test login.spec.ts --ui --debug",
+    "start:ddsold": "npx playwright test ddsold.spec.ts",
+    "start:ddsold:debug": "npx playwright test ddsold.spec.ts --ui --debug"
 
   },
   "keywords": [],

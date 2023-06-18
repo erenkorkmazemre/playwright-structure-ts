@@ -10,7 +10,7 @@ test.describe('Try to login then check failure and success', async () => {
         await goTo(page, process.env.URL)
         await fillTheInput('Fill the username input', page, LOGIN.USERNAME, process.env.USERNAME)
         await fillTheInput('Fill the password input', page, LOGIN.PASSWORD, process.env.PASSWORD)
-        await click('Click the submit input', page, LOGIN.SUBMIT_BUTTON)
+        await click('Click the submit button', page, LOGIN.SUBMIT_BUTTON)
         await expect(page).toHaveURL('https://franchise.develop.getirapi.com/map/live')
         /** Under the below includes API request && response process **/
         const response = await page.request.post('https://franchise-api-gateway.development.getirapi.com/auth/login', {
