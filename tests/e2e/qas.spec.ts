@@ -1,12 +1,13 @@
 import {expect, test} from '@playwright/test'
 import {goTo} from "../../pages/LoginPage";
-import {click, fillTheInput, mockDataWithArray} from "../../pages/CommonPage";
+import {click, fillTheInput, mockDataWithMultipleArray} from "../../pages/CommonPage";
 import {LOGIN} from "../../locators/loginLocators";
 import {EX2, EX3} from "../../data/mocks/dynamic/ddsOld/DynamicExamples";
 import {SummaryModel} from "../../data/mocks/dynamic/qas/Summary";
 import * as fs from 'fs';
 import * as path from 'path';
 import {COMMON} from "../../locators/commonLocators";
+import {QAS_ENDPOINT} from "../../utils/endpoints/qas";
 
 const mockedSummaryResponse = JSON.parse(
     fs.readFileSync(
@@ -27,9 +28,8 @@ test.beforeEach(async ({page}) => {
 test.describe('QAS check mocking', async () => {
     test('Summary Endpoint', async ({page}) => {
 
-        const summaryModel = new SummaryModel(25);
         await goTo(page, 'https://franchise.develop.getirapi.com/dys/kds/summary')
-        await mockDataWithArray("QAS Summary endpoint desc", page, summaryModel, "https://franchise-api-gateway.development.getirapi.com/audit/summary-last-90")
+        await mockDataWithMultipleArray("QAS Summary endpoint desc", SummaryModel, 46, page, QAS_ENDPOINT.SUMMARY)
         await page.waitForTimeout(20000)
 
 

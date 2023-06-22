@@ -1,5 +1,6 @@
 import {Page} from '@playwright/test';
 import {LOGIN} from "../locators/loginLocators";
+import {SummaryModel} from "../data/mocks/dynamic/qas/Summary";
 
 export async function click(
     stepDescription: string,
@@ -20,16 +21,18 @@ export async function fillTheInput(
     console.log(stepDescription)
 }
 
-export async function mockDataWithArray(
+export async function mockDataWithMultipleArray(
     stepDescription: string,
+    singleton:any,
+    arraySize:number,
     page: Page,
-    data: any,
     endpoint: string,
 ): Promise<void> {
+    singleton = new singleton(arraySize)
     await page.route(endpoint,
         async route => {
             await route.fulfill({
-                body: JSON.stringify(data),
+                body: JSON.stringify(singleton),
             });
         });
     console.log(stepDescription)
