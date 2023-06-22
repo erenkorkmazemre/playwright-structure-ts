@@ -11,14 +11,19 @@ export class SummaryModel {
     constructor(
         data: Datum[] = [{
             "criterionPoints": [{
-                "criterionId": "621e34cf6b172f48ab432967",
+                "criterionId": faker.database.mongodbObjectId(),
                 "criterionIndex": 1,
-                "name": {"tr": "TRTRTR1", "en": "ENENEN2"},
+                "name": {"tr": faker.random.words(3) + "--TR", "en": faker.random.words(3) + "--EN"},
                 "value": faker.datatype.number(1000)
             }, {
-                "criterionId": "621e34e06b172fd10943296c",
+                "criterionId": faker.database.mongodbObjectId(),
                 "criterionIndex": 2,
-                "name": {"tr": "TRTRTR", "en": "ENENEN"},
+                "name": {"tr": faker.random.words(3) + "--TR", "en": faker.random.words(3) + "--EN"},
+                "value": faker.datatype.number(1000)
+            }, {
+                "criterionId": faker.database.mongodbObjectId(),
+                "criterionIndex": 3,
+                "name": {"tr": faker.random.words(3) + "--TR", "en": faker.random.words(3) + "--EN"},
                 "value": faker.datatype.number(1000)
             }],
             "currentRank": faker.datatype.number(1000),
