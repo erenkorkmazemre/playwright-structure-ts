@@ -23,7 +23,6 @@ test.describe('DDS OLD check mocking', async () => {
         console.log(JSON.stringify(criteriaModel2))
         console.log(criteriaModel3.toJSON())
 
-        console.log("2")
     })
 });
 
