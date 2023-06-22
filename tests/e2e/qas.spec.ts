@@ -26,23 +26,26 @@ test.beforeEach(async ({page}) => {
 
 test.describe('QAS check mocking', async () => {
     test('Summary Endpoint', async ({page}) => {
+
+        const summaryModel = new SummaryModel();
+        const summaryModel3 = new EX3("foo", "bar");
+        console.log(JSON.stringify(summaryModel))
+        console.log(summaryModel3.toJSON())
+        console.log(mockedSummaryResponse)
+        console.log("eren")
+        console.log("---------------------")
+        console.log(summaryModel)
+        console.log("---------------------")
+        console.log(mockedSummaryResponse)
+        console.log("---------------------")
         await page.goto('https://franchise.develop.getirapi.com/dys/kds/summary')
         await page.route('https://franchise-api-gateway.development.getirapi.com/audit/summary-last-90',
             async route => {
                 await route.fulfill({
-                    body: JSON.stringify(mockedSummaryResponse),
+                    body: JSON.stringify(summaryModel),
                 });
             });
 
-        const summaryModel = new SummaryModel();
-        const summaryModel2 = new SummaryModel("12345");
-        const summaryModel3 = new EX3("foo", "bar");
-        console.log(JSON.stringify(summaryModel))
-        console.log(JSON.stringify(summaryModel2))
-        console.log(summaryModel3.toJSON())
-        console.log(mockedSummaryResponse)
-        console.log("eren")
-        console.log("eren2")
         await page.waitForTimeout(20000)
 
 
