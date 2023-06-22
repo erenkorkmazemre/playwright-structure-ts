@@ -1,6 +1,18 @@
 import {faker} from "@faker-js/faker";
-import {RuleVariable} from "../ddsOld/CriteriaModel";
 
+
+const randomArray = (maxArray) => {
+    var jsonArr = [];
+    for (var i = 0; i < maxArray; i++) {
+        jsonArr.push({
+            criterionId: faker.database.mongodbObjectId(),
+            criterionIndex: faker.datatype.number(1000),
+            name: {"tr": faker.random.words(3) + "--TR", "en": faker.random.words(3) + "--EN"},
+            value: faker.datatype.number(1000)
+        });
+    }
+    return jsonArr;
+}
 
 export class SummaryModel {
 
@@ -10,22 +22,7 @@ export class SummaryModel {
 
     constructor(
         data: Datum[] = [{
-            "criterionPoints": [{
-                "criterionId": faker.database.mongodbObjectId(),
-                "criterionIndex": 1,
-                "name": {"tr": faker.random.words(3) + "--TR", "en": faker.random.words(3) + "--EN"},
-                "value": faker.datatype.number(1000)
-            }, {
-                "criterionId": faker.database.mongodbObjectId(),
-                "criterionIndex": 2,
-                "name": {"tr": faker.random.words(3) + "--TR", "en": faker.random.words(3) + "--EN"},
-                "value": faker.datatype.number(1000)
-            }, {
-                "criterionId": faker.database.mongodbObjectId(),
-                "criterionIndex": 3,
-                "name": {"tr": faker.random.words(3) + "--TR", "en": faker.random.words(3) + "--EN"},
-                "value": faker.datatype.number(1000)
-            }],
+            "criterionPoints": randomArray(20),
             "currentRank": faker.datatype.number(1000),
             "franchiseId": "5e0d8a1df0f1d572ab399aaa",
             "kdsPoints": faker.datatype.number(1000),
