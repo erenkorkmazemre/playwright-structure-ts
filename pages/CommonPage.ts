@@ -20,6 +20,21 @@ export async function fillTheInput(
     console.log(stepDescription)
 }
 
+export async function mockDataWithArray(
+    stepDescription: string,
+    page: Page,
+    data: any,
+    endpoint: string,
+): Promise<void> {
+    await page.route(endpoint,
+        async route => {
+            await route.fulfill({
+                body: JSON.stringify(data),
+            });
+        });
+    console.log(stepDescription)
+}
+
 
 //export default {login, sigIn};
 

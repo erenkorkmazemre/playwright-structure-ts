@@ -15,14 +15,15 @@ const randomArray = (maxArray) => {
 }
 
 export class SummaryModel {
-
+    randomArrayNumber: number;
     data: Datum[];
     status: number;
     total: number;
 
     constructor(
+        randomArrayNumber: number = 0,
         data: Datum[] = [{
-            "criterionPoints": randomArray(20),
+            "criterionPoints": randomArray(randomArrayNumber),
             "currentRank": faker.datatype.number(1000),
             "franchiseId": "5e0d8a1df0f1d572ab399aaa",
             "kdsPoints": faker.datatype.number(1000),
@@ -32,6 +33,7 @@ export class SummaryModel {
         status: number = 200,
         total: number = faker.datatype.number(1000),
     ) {
+        this.randomArrayNumber = randomArrayNumber;
         this.data = data;
         this.status = status;
         this.total = total;
@@ -39,6 +41,7 @@ export class SummaryModel {
 
     toJSON() {
         return {
+            randomArrayNumber: this.randomArrayNumber,
             data: this.data,
             status: this.status,
             total: this.total

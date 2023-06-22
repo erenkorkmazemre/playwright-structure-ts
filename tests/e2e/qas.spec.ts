@@ -1,6 +1,6 @@
 import {expect, test} from '@playwright/test'
 import {goTo} from "../../pages/LoginPage";
-import {click, fillTheInput} from "../../pages/CommonPage";
+import {click, fillTheInput, mockDataWithArray} from "../../pages/CommonPage";
 import {LOGIN} from "../../locators/loginLocators";
 import {EX2, EX3} from "../../data/mocks/dynamic/ddsOld/DynamicExamples";
 import {SummaryModel} from "../../data/mocks/dynamic/qas/Summary";
@@ -27,27 +27,10 @@ test.beforeEach(async ({page}) => {
 test.describe('QAS check mocking', async () => {
     test('Summary Endpoint', async ({page}) => {
 
-        const summaryModel = new SummaryModel();
-        const summaryModel3 = new EX3("foo", "bar");
-        console.log(JSON.stringify(summaryModel))
-        console.log(summaryModel3.toJSON())
-        console.log(mockedSummaryResponse)
-        console.log("eren")
-        console.log("---------------------")
-        console.log(summaryModel)
-        console.log("---------------------")
-        console.log(mockedSummaryResponse)
-        console.log("---------------------")
-        await page.goto('https://franchise.develop.getirapi.com/dys/kds/summary')
-        await page.route('https://franchise-api-gateway.development.getirapi.com/audit/summary-last-90',
-            async route => {
-                await route.fulfill({
-                    body: JSON.stringify(summaryModel),
-                });
-            });
-
+        const summaryModel = new SummaryModel(25);
+        await goTo(page, 'https://franchise.develop.getirapi.com/dys/kds/summary')
+        await mockDataWithArray("QAS Summary endpoint desc", page, summaryModel, "https://franchise-api-gateway.development.getirapi.com/audit/summary-last-90")
         await page.waitForTimeout(20000)
-
 
 
     })
