@@ -1,9 +1,9 @@
 import {expect, test} from '@playwright/test'
-import {goTo} from "../../pages/LoginPage";
-import {click, fillTheInput} from "../../pages/CommonPage";
-import {LOGIN} from "../../locators/loginLocators";
-import {CriteriaModel} from "../../data/mocks/dynamic/ddsOld/CriteriaModel";
-import {EX2, EX3} from "../../data/mocks/dynamic/ddsOld/DynamicExamples";
+import {goTo} from "@pages/LoginPage";
+import {click, fillTheInput} from "@pages/CommonPage";
+import {LOGIN} from "@locators/loginLocators";
+import {CriteriaModel} from "@data/mocks/dynamic/ddsOld/CriteriaModel";
+import {EX2, EX3} from "@data/mocks/dynamic/ddsOld/DynamicExamples";
 
 test.beforeEach(async ({page}) => {
     await goTo(page, process.env.URL)

@@ -1,6 +1,6 @@
 import {Page} from '@playwright/test';
-import {LOGIN} from "../locators/loginLocators";
-import {SummaryModel} from "../data/mocks/dynamic/qas/Summary";
+import {LOGIN} from "@locators/loginLocators";
+import {SummaryModel} from "@data/mocks/dynamic/qas/Summary";
 
 export async function click(
     stepDescription: string,

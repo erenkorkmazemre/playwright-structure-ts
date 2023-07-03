@@ -7,3 +7,5 @@
 /playwright-report;
 /test-results
 .idea/git_toolbox_prj.xml
+playwright-report/index.html
+.idea/vcs.xml

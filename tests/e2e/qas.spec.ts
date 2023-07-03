@@ -1,13 +1,13 @@
 import {expect, test} from '@playwright/test'
-import {goTo} from "../../pages/LoginPage";
-import {click, fillTheInput, mockDataWithMultipleArray} from "../../pages/CommonPage";
-import {LOGIN} from "../../locators/loginLocators";
-import {EX2, EX3} from "../../data/mocks/dynamic/ddsOld/DynamicExamples";
-import {SummaryModel} from "../../data/mocks/dynamic/qas/Summary";
+import {goTo} from "@pages/LoginPage";
+import {click, fillTheInput, mockDataWithMultipleArray} from "@pages/CommonPage";
+import {LOGIN} from "@locators/loginLocators";
+import {EX2, EX3} from "@data/mocks/dynamic/ddsOld/DynamicExamples";
+import {SummaryModel} from "@data/mocks/dynamic/qas/Summary";
 import * as fs from 'fs';
 import * as path from 'path';
-import {COMMON} from "../../locators/commonLocators";
-import {QAS_ENDPOINT} from "../../utils/endpoints/qas";
+import {COMMON} from "@locators/commonLocators";
+import {QAS_ENDPOINT} from "@utils/endpoints/qas";
 
 const mockedSummaryResponse = JSON.parse(
     fs.readFileSync(
