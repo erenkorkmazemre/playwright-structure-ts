@@ -4,4 +4,6 @@
 
 /node_modules
 /vars
-/playwright-report
+/playwright-report;
+/test-results
+.idea/git_toolbox_prj.xml
