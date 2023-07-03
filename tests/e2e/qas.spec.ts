@@ -30,7 +30,7 @@ test.describe('QAS check mocking', async () => {
 
         await goTo(page, 'https://franchise.develop.getirapi.com/dys/kds/summary')
         await mockDataWithMultipleArray("QAS Summary endpoint desc", SummaryModel, 46, page, QAS_ENDPOINT.SUMMARY)
-        await page.waitForTimeout(20000)
+        await page.waitForTimeout(10000)
 
 
     })

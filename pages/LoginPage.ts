@@ -16,7 +16,7 @@ import {Page} from '@playwright/test';
 
 export async function goTo(
     page: Page,
-    url: string
+    url: any
 ): Promise<void> {
     await page.goto(url);
 }
