@@ -1,26 +1,33 @@
 {
-  "name": "playwright_merge_fl",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "npx playwright test",
-    "start:ui": "npx playwright test --ui",
-    "start:ui:debug": "npx playwright test --ui --debug",
-    "start:login:debug": "npx playwright test login.spec.ts --ui --debug",
-    "start:ddsold": "npx playwright test ddsold.spec.ts",
-    "start:ddsold:debug": "npx playwright test ddsold.spec.ts --ui --debug",
-    "start:qas": "npx playwright test qas.spec.ts",
-    "start:qas:ui": "npx playwright test qas.spec.ts --ui",
-    "start:qas:debug": "npx playwright test qas.spec.ts --ui --debug"
-
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@faker-js/faker": "^7.6.0",
-    "@playwright/test": "^1.35.1",
-    "dotenv": "^16.0.3"
-  }
+    "name": "playwright_merge_fl",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx playwright test",
+        "prettier": "npx prettier ./ --write",
+        "start:ui": "npx playwright test --ui",
+        "start:ui:debug": "npx playwright test --ui --debug",
+        "start:login:debug": "npx playwright test login.spec.ts --ui --debug",
+        "start:ddsold": "npx playwright test ddsold.spec.ts",
+        "start:ddsold:debug": "npx playwright test ddsold.spec.ts --ui --debug",
+        "start:qas": "npx playwright test qas.spec.ts",
+        "start:qas:ui": "npx playwright test qas.spec.ts --ui",
+        "start:qas:debug": "npx playwright test qas.spec.ts --ui --debug"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@faker-js/faker": "^7.6.0",
+        "@playwright/test": "^1.35.1",
+        "@typescript-eslint/eslint-plugin": "^5.60.1",
+        "@typescript-eslint/parser": "^5.60.1",
+        "dotenv": "^16.0.3",
+        "eslint": "^8.44.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.2",
+        "prettier": "2.8.8"
+    }
 }

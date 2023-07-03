@@ -1,5 +1,4 @@
-import {faker} from "@faker-js/faker";
-
+import { faker } from '@faker-js/faker';
 
 const randomArray = (maxArray) => {
     var jsonArr = [];
@@ -7,12 +6,12 @@ const randomArray = (maxArray) => {
         jsonArr.push({
             criterionId: faker.database.mongodbObjectId(),
             criterionIndex: faker.datatype.number(1000),
-            name: {"tr": faker.random.words(3) + "--TR", "en": faker.random.words(3) + "--EN"},
+            name: { tr: faker.random.words(3) + '--TR', en: faker.random.words(3) + '--EN' },
             value: faker.datatype.number(1000)
         });
     }
     return jsonArr;
-}
+};
 
 export class SummaryModel {
     randomArrayNumber: number;
@@ -22,16 +21,18 @@ export class SummaryModel {
 
     constructor(
         randomArrayNumber: number = 0,
-        data: Datum[] = [{
-            "criterionPoints": randomArray(randomArrayNumber),
-            "currentRank": faker.datatype.number(1000),
-            "franchiseId": "5e0d8a1df0f1d572ab399aaa",
-            "kdsPoints": faker.datatype.number(1000),
-            "warehouseId": "5e70b7f7ceb001bd49134d73",
-            "warehouseName": faker.random.words(3)
-        }],
+        data: Datum[] = [
+            {
+                criterionPoints: randomArray(randomArrayNumber),
+                currentRank: faker.datatype.number(1000),
+                franchiseId: '5e0d8a1df0f1d572ab399aaa',
+                kdsPoints: faker.datatype.number(1000),
+                warehouseId: '5e70b7f7ceb001bd49134d73',
+                warehouseName: faker.random.words(3)
+            }
+        ],
         status: number = 200,
-        total: number = faker.datatype.number(1000),
+        total: number = faker.datatype.number(1000)
     ) {
         this.randomArrayNumber = randomArrayNumber;
         this.data = data;
@@ -45,7 +46,7 @@ export class SummaryModel {
             data: this.data,
             status: this.status,
             total: this.total
-        }
+        };
     }
 }
 
@@ -69,4 +70,3 @@ export interface Name {
     tr: string;
     en: string;
 }
-

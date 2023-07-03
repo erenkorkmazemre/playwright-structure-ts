@@ -1,4 +1,3 @@
-
 Inside that directory, you can run several commands:
 
 npx playwright test
@@ -30,8 +29,9 @@ We suggest that you begin by typing:
     npx playwright test
 
 And check out the following files:
-- ./tests/example.spec.ts - Example end-to-end test
-- ./tests-examples/demo-todo-app.spec.ts - Demo Todo App end-to-end tests
-- ./playwright.config.ts - Playwright Test configuration
+
+-   ./tests/example.spec.ts - Example end-to-end test
+-   ./tests-examples/demo-todo-app.spec.ts - Demo Todo App end-to-end tests
+-   ./playwright.config.ts - Playwright Test configuration
 
 Visit https://playwright.dev/docs/intro for more information. ✨

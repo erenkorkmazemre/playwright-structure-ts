@@ -1,333 +1,333 @@
 [
-  {
-    "warehouseId": "5ed798c4becdf9633088b1c7",
-    "franchiseId": "59c2536ae8468524a5e7bb40",
-    "previousRank": 1116,
-    "currentRank": 1138,
-    "letterGrade": "F",
-    "dayCount": 1102,
-    "totalPoint": 655,
-    "pointsToBeDeletedNextDay": 0,
-    "criterionPoints": []
-  },
-  {
-    "warehouseId": "5577f739d8631b0c00fb4b70",
-    "franchiseId": "589b9397d4c6826122dea312",
-    "previousRank": 208,
-    "currentRank": 206,
-    "letterGrade": "A+",
-    "dayCount": 1125,
-    "totalPoint": 390895,
-    "pointsToBeDeletedNextDay": 0,
-    "criterionPoints": [],
-    "warehouseName": "Cevahir"
-  },
-  {
-    "warehouseId": "640a1fa143ff89100f4074a3",
-    "franchiseId": "60a7840b9578a0587db26e0f",
-    "previousRank": 1136,
-    "currentRank": 1141,
-    "letterGrade": "F",
-    "dayCount": 12,
-    "totalPoint": 300,
-    "pointsToBeDeletedNextDay": 0,
-    "criterionPoints": []
-  },
-  {
-    "warehouseId": "6405fa520d065206c0d27d01",
-    "franchiseId": "647ef40cd92c064ce716de5d",
-    "previousRank": 1433,
-    "currentRank": 1140,
-    "letterGrade": "F",
-    "dayCount": 4,
-    "totalPoint": 550,
-    "pointsToBeDeletedNextDay": 0,
-    "criterionPoints": []
-  },
-  {
-    "warehouseId": "5d701e2a7a43350001a6d81f",
-    "franchiseId": "5fc6ae17c4da192febdffebf",
-    "previousRank": 205,
-    "currentRank": 207,
-    "letterGrade": "A+",
-    "dayCount": 690,
-    "totalPoint": 390385,
-    "pointsToBeDeletedNextDay": 0,
-    "criterionPoints": []
-  },
-  {
-    "warehouseId": "6408a1b6cfbb8ea998b5fe10",
-    "franchiseId": "647eeaa6d63349afd4d8a937",
-    "previousRank": 1426,
-    "currentRank": 1137,
-    "letterGrade": "F",
-    "dayCount": 4,
-    "totalPoint": 705,
-    "pointsToBeDeletedNextDay": 0,
-    "criterionPoints": []
-  },
-  {
-    "warehouseId": "5db9759777a0c71180d7694c",
-    "franchiseId": "5e0d8a1df0f1d572ab399aaa",
-    "previousRank": 209,
-    "currentRank": 205,
-    "letterGrade": "A+",
-    "dayCount": 1024,
-    "totalPoint": 391195,
-    "pointsToBeDeletedNextDay": 5445,
-    "criterionPoints": [
-      {
-        "criterionIndex": 8,
-        "criterionId": "5e9f9288c3b33210444bb79c",
-        "point": -58650,
-        "name": {
-          "tr": "Kaçan Sipariş",
-          "en": "Missed Orders"
-        }
-      },
-      {
-        "criterionIndex": 12,
-        "criterionId": "5eaf41696754aa003dd9f48a",
-        "point": 0,
-        "name": {
-          "tr": "Kaptırılan Sipariş",
-          "en": "Extended Regions (Helped)"
-        }
-      },
-      {
-        "criterionIndex": 2,
-        "criterionId": "5e85aeb75cbb590329c6ce61",
-        "point": 15745,
-        "name": {
-          "tr": "Yıldız Puanı",
-          "en": "Star Rating"
-        }
-      },
-      {
-        "criterionIndex": 13,
-        "criterionId": "5e7d56405cbb590329c6cdb9",
-        "point": -24945,
-        "name": {
-          "tr": "Kırmızı Sepet",
-          "en": "Checkout Errors"
-        }
-      },
-      {
-        "criterionIndex": 14,
-        "criterionId": "5eaf417f6754aa003dd9f48b",
-        "point": 3330,
-        "name": {
-          "tr": "Kapılan Sipariş",
-          "en": "Extended Regions (Help)"
-        }
-      },
-      {
-        "criterionIndex": 5,
-        "criterionId": "5e97864fc3b33210444bb74a",
-        "point": 31300,
-        "name": {
-          "tr": "İrsaliye",
-          "en": "Waybills"
-        }
-      },
-      {
-        "criterionIndex": 7,
-        "criterionId": "5ef503f7810a73318ed8923d",
-        "point": -127400,
-        "name": {
-          "tr": "Ürün Hatası",
-          "en": "Missing Product"
-        }
-      },
-      {
-        "criterionIndex": 10,
-        "criterionId": "5e7ca4575cbb590329c6cdb1",
-        "point": -31135,
-        "name": {
-          "tr": "Kuyruk",
-          "en": "Queued Orders"
-        }
-      },
-      {
-        "criterionIndex": 16,
-        "criterionId": "5ff70b48e8b1ba623da7d5b5",
-        "point": -24950,
-        "name": {
-          "tr": "Depo içi Süreler",
-          "en": "Durations in Warehouse"
-        }
-      },
-      {
-        "criterionIndex": 4,
-        "criterionId": "5e8b17b2ddde425649afb636",
-        "point": 158445,
-        "name": {
-          "tr": "Hazırlama Süresi",
-          "en": "Prepare Durations"
-        }
-      },
-      {
-        "criterionIndex": 1,
-        "criterionId": "5e84f6975cbb590329c6ce56",
-        "point": 450205,
-        "name": {
-          "tr": "Sipariş",
-          "en": "Order"
-        }
-      },
-      {
-        "criterionIndex": 6,
-        "criterionId": "5e9f7f76c3b33210444bb797",
-        "point": -750,
-        "name": {
-          "tr": "İptal Sipariş",
-          "en": "Cancelled Orders"
-        }
-      }
-    ],
-    "warehouseName": "ZincirlikuyuBüyük (DOKUNMA)"
-  },
-  {
-    "warehouseId": "5fd1c2ef6fcb7d40917b65ab",
-    "franchiseId": "5e0d8a1df0f1d572ab399aaa",
-    "previousRank": 204,
-    "currentRank": 204,
-    "letterGrade": "A+",
-    "dayCount": 546,
-    "totalPoint": 391430,
-    "pointsToBeDeletedNextDay": 0,
-    "criterionPoints": []
-  },
-  {
-    "warehouseId": "608821b9c1fadbf4fbaeb002",
-    "franchiseId": "5e0d8a1df0f1d572ab399aaa",
-    "previousRank": 1127,
-    "currentRank": 1139,
-    "letterGrade": "F",
-    "dayCount": 133,
-    "totalPoint": 655,
-    "pointsToBeDeletedNextDay": 0,
-    "criterionPoints": [
-      {
-        "criterionIndex": 6,
-        "criterionId": "5e9f7f76c3b33210444bb797",
-        "point": 0,
-        "name": {
-          "tr": "İptal Sipariş",
-          "en": "Cancelled Orders"
-        }
-      },
-      {
-        "criterionIndex": 1,
-        "criterionId": "5e84f6975cbb590329c6ce56",
-        "point": 65,
-        "name": {
-          "tr": "Sipariş",
-          "en": "Order"
-        }
-      },
-      {
-        "criterionIndex": 4,
-        "criterionId": "5e8b17b2ddde425649afb636",
-        "point": 60,
-        "name": {
-          "tr": "Hazırlama Süresi",
-          "en": "Prepare Durations"
-        }
-      },
-      {
-        "criterionIndex": 10,
-        "criterionId": "5e7ca4575cbb590329c6cdb1",
-        "point": 0,
-        "name": {
-          "tr": "Kuyruk",
-          "en": "Queued Orders"
-        }
-      },
-      {
-        "criterionIndex": 2,
-        "criterionId": "5e85aeb75cbb590329c6ce61",
-        "point": 130,
-        "name": {
-          "tr": "Yıldız Puanı",
-          "en": "Star Rating"
-        }
-      },
-      {
-        "criterionIndex": 13,
-        "criterionId": "5e7d56405cbb590329c6cdb9",
-        "point": 0,
-        "name": {
-          "tr": "Kırmızı Sepet",
-          "en": "Checkout Errors"
-        }
-      },
-      {
-        "criterionIndex": 8,
-        "criterionId": "5e9f9288c3b33210444bb79c",
-        "point": 0,
-        "name": {
-          "tr": "Kaçan Sipariş",
-          "en": "Missed Orders"
-        }
-      },
-      {
-        "criterionIndex": 16,
-        "criterionId": "5ff70b48e8b1ba623da7d5b5",
-        "point": 1000,
-        "name": {
-          "tr": "Depo içi Süreler",
-          "en": "Durations in Warehouse"
-        }
-      },
-      {
-        "criterionIndex": 12,
-        "criterionId": "5eaf41696754aa003dd9f48a",
-        "point": 0,
-        "name": {
-          "tr": "Kaptırılan Sipariş",
-          "en": "Extended Regions (Helped)"
-        }
-      },
-      {
-        "criterionIndex": 7,
-        "criterionId": "5ef503f7810a73318ed8923d",
-        "point": -700,
-        "name": {
-          "tr": "Ürün Hatası",
-          "en": "Missing Product"
-        }
-      },
-      {
-        "criterionIndex": 5,
-        "criterionId": "5e97864fc3b33210444bb74a",
-        "point": 100,
-        "name": {
-          "tr": "İrsaliye",
-          "en": "Waybills"
-        }
-      },
-      {
-        "criterionIndex": 14,
-        "criterionId": "5eaf417f6754aa003dd9f48b",
-        "point": 0,
-        "name": {
-          "tr": "Kapılan Sipariş",
-          "en": "Extended Regions (Help)"
-        }
-      }
-    ],
-    "warehouseName": "Burak Depo PROD_ID"
-  },
-  {
-    "warehouseId": "61656107fa2d653d59ea1b82",
-    "franchiseId": "61b668adf735e340ae8b59b9",
-    "previousRank": 203,
-    "currentRank": 203,
-    "letterGrade": "A+",
-    "dayCount": 553,
-    "totalPoint": 396710,
-    "pointsToBeDeletedNextDay": 0,
-    "criterionPoints": []
-  }
+    {
+        "warehouseId": "5ed798c4becdf9633088b1c7",
+        "franchiseId": "59c2536ae8468524a5e7bb40",
+        "previousRank": 1116,
+        "currentRank": 1138,
+        "letterGrade": "F",
+        "dayCount": 1102,
+        "totalPoint": 655,
+        "pointsToBeDeletedNextDay": 0,
+        "criterionPoints": []
+    },
+    {
+        "warehouseId": "5577f739d8631b0c00fb4b70",
+        "franchiseId": "589b9397d4c6826122dea312",
+        "previousRank": 208,
+        "currentRank": 206,
+        "letterGrade": "A+",
+        "dayCount": 1125,
+        "totalPoint": 390895,
+        "pointsToBeDeletedNextDay": 0,
+        "criterionPoints": [],
+        "warehouseName": "Cevahir"
+    },
+    {
+        "warehouseId": "640a1fa143ff89100f4074a3",
+        "franchiseId": "60a7840b9578a0587db26e0f",
+        "previousRank": 1136,
+        "currentRank": 1141,
+        "letterGrade": "F",
+        "dayCount": 12,
+        "totalPoint": 300,
+        "pointsToBeDeletedNextDay": 0,
+        "criterionPoints": []
+    },
+    {
+        "warehouseId": "6405fa520d065206c0d27d01",
+        "franchiseId": "647ef40cd92c064ce716de5d",
+        "previousRank": 1433,
+        "currentRank": 1140,
+        "letterGrade": "F",
+        "dayCount": 4,
+        "totalPoint": 550,
+        "pointsToBeDeletedNextDay": 0,
+        "criterionPoints": []
+    },
+    {
+        "warehouseId": "5d701e2a7a43350001a6d81f",
+        "franchiseId": "5fc6ae17c4da192febdffebf",
+        "previousRank": 205,
+        "currentRank": 207,
+        "letterGrade": "A+",
+        "dayCount": 690,
+        "totalPoint": 390385,
+        "pointsToBeDeletedNextDay": 0,
+        "criterionPoints": []
+    },
+    {
+        "warehouseId": "6408a1b6cfbb8ea998b5fe10",
+        "franchiseId": "647eeaa6d63349afd4d8a937",
+        "previousRank": 1426,
+        "currentRank": 1137,
+        "letterGrade": "F",
+        "dayCount": 4,
+        "totalPoint": 705,
+        "pointsToBeDeletedNextDay": 0,
+        "criterionPoints": []
+    },
+    {
+        "warehouseId": "5db9759777a0c71180d7694c",
+        "franchiseId": "5e0d8a1df0f1d572ab399aaa",
+        "previousRank": 209,
+        "currentRank": 205,
+        "letterGrade": "A+",
+        "dayCount": 1024,
+        "totalPoint": 391195,
+        "pointsToBeDeletedNextDay": 5445,
+        "criterionPoints": [
+            {
+                "criterionIndex": 8,
+                "criterionId": "5e9f9288c3b33210444bb79c",
+                "point": -58650,
+                "name": {
+                    "tr": "Kaçan Sipariş",
+                    "en": "Missed Orders"
+                }
+            },
+            {
+                "criterionIndex": 12,
+                "criterionId": "5eaf41696754aa003dd9f48a",
+                "point": 0,
+                "name": {
+                    "tr": "Kaptırılan Sipariş",
+                    "en": "Extended Regions (Helped)"
+                }
+            },
+            {
+                "criterionIndex": 2,
+                "criterionId": "5e85aeb75cbb590329c6ce61",
+                "point": 15745,
+                "name": {
+                    "tr": "Yıldız Puanı",
+                    "en": "Star Rating"
+                }
+            },
+            {
+                "criterionIndex": 13,
+                "criterionId": "5e7d56405cbb590329c6cdb9",
+                "point": -24945,
+                "name": {
+                    "tr": "Kırmızı Sepet",
+                    "en": "Checkout Errors"
+                }
+            },
+            {
+                "criterionIndex": 14,
+                "criterionId": "5eaf417f6754aa003dd9f48b",
+                "point": 3330,
+                "name": {
+                    "tr": "Kapılan Sipariş",
+                    "en": "Extended Regions (Help)"
+                }
+            },
+            {
+                "criterionIndex": 5,
+                "criterionId": "5e97864fc3b33210444bb74a",
+                "point": 31300,
+                "name": {
+                    "tr": "İrsaliye",
+                    "en": "Waybills"
+                }
+            },
+            {
+                "criterionIndex": 7,
+                "criterionId": "5ef503f7810a73318ed8923d",
+                "point": -127400,
+                "name": {
+                    "tr": "Ürün Hatası",
+                    "en": "Missing Product"
+                }
+            },
+            {
+                "criterionIndex": 10,
+                "criterionId": "5e7ca4575cbb590329c6cdb1",
+                "point": -31135,
+                "name": {
+                    "tr": "Kuyruk",
+                    "en": "Queued Orders"
+                }
+            },
+            {
+                "criterionIndex": 16,
+                "criterionId": "5ff70b48e8b1ba623da7d5b5",
+                "point": -24950,
+                "name": {
+                    "tr": "Depo içi Süreler",
+                    "en": "Durations in Warehouse"
+                }
+            },
+            {
+                "criterionIndex": 4,
+                "criterionId": "5e8b17b2ddde425649afb636",
+                "point": 158445,
+                "name": {
+                    "tr": "Hazırlama Süresi",
+                    "en": "Prepare Durations"
+                }
+            },
+            {
+                "criterionIndex": 1,
+                "criterionId": "5e84f6975cbb590329c6ce56",
+                "point": 450205,
+                "name": {
+                    "tr": "Sipariş",
+                    "en": "Order"
+                }
+            },
+            {
+                "criterionIndex": 6,
+                "criterionId": "5e9f7f76c3b33210444bb797",
+                "point": -750,
+                "name": {
+                    "tr": "İptal Sipariş",
+                    "en": "Cancelled Orders"
+                }
+            }
+        ],
+        "warehouseName": "ZincirlikuyuBüyük (DOKUNMA)"
+    },
+    {
+        "warehouseId": "5fd1c2ef6fcb7d40917b65ab",
+        "franchiseId": "5e0d8a1df0f1d572ab399aaa",
+        "previousRank": 204,
+        "currentRank": 204,
+        "letterGrade": "A+",
+        "dayCount": 546,
+        "totalPoint": 391430,
+        "pointsToBeDeletedNextDay": 0,
+        "criterionPoints": []
+    },
+    {
+        "warehouseId": "608821b9c1fadbf4fbaeb002",
+        "franchiseId": "5e0d8a1df0f1d572ab399aaa",
+        "previousRank": 1127,
+        "currentRank": 1139,
+        "letterGrade": "F",
+        "dayCount": 133,
+        "totalPoint": 655,
+        "pointsToBeDeletedNextDay": 0,
+        "criterionPoints": [
+            {
+                "criterionIndex": 6,
+                "criterionId": "5e9f7f76c3b33210444bb797",
+                "point": 0,
+                "name": {
+                    "tr": "İptal Sipariş",
+                    "en": "Cancelled Orders"
+                }
+            },
+            {
+                "criterionIndex": 1,
+                "criterionId": "5e84f6975cbb590329c6ce56",
+                "point": 65,
+                "name": {
+                    "tr": "Sipariş",
+                    "en": "Order"
+                }
+            },
+            {
+                "criterionIndex": 4,
+                "criterionId": "5e8b17b2ddde425649afb636",
+                "point": 60,
+                "name": {
+                    "tr": "Hazırlama Süresi",
+                    "en": "Prepare Durations"
+                }
+            },
+            {
+                "criterionIndex": 10,
+                "criterionId": "5e7ca4575cbb590329c6cdb1",
+                "point": 0,
+                "name": {
+                    "tr": "Kuyruk",
+                    "en": "Queued Orders"
+                }
+            },
+            {
+                "criterionIndex": 2,
+                "criterionId": "5e85aeb75cbb590329c6ce61",
+                "point": 130,
+                "name": {
+                    "tr": "Yıldız Puanı",
+                    "en": "Star Rating"
+                }
+            },
+            {
+                "criterionIndex": 13,
+                "criterionId": "5e7d56405cbb590329c6cdb9",
+                "point": 0,
+                "name": {
+                    "tr": "Kırmızı Sepet",
+                    "en": "Checkout Errors"
+                }
+            },
+            {
+                "criterionIndex": 8,
+                "criterionId": "5e9f9288c3b33210444bb79c",
+                "point": 0,
+                "name": {
+                    "tr": "Kaçan Sipariş",
+                    "en": "Missed Orders"
+                }
+            },
+            {
+                "criterionIndex": 16,
+                "criterionId": "5ff70b48e8b1ba623da7d5b5",
+                "point": 1000,
+                "name": {
+                    "tr": "Depo içi Süreler",
+                    "en": "Durations in Warehouse"
+                }
+            },
+            {
+                "criterionIndex": 12,
+                "criterionId": "5eaf41696754aa003dd9f48a",
+                "point": 0,
+                "name": {
+                    "tr": "Kaptırılan Sipariş",
+                    "en": "Extended Regions (Helped)"
+                }
+            },
+            {
+                "criterionIndex": 7,
+                "criterionId": "5ef503f7810a73318ed8923d",
+                "point": -700,
+                "name": {
+                    "tr": "Ürün Hatası",
+                    "en": "Missing Product"
+                }
+            },
+            {
+                "criterionIndex": 5,
+                "criterionId": "5e97864fc3b33210444bb74a",
+                "point": 100,
+                "name": {
+                    "tr": "İrsaliye",
+                    "en": "Waybills"
+                }
+            },
+            {
+                "criterionIndex": 14,
+                "criterionId": "5eaf417f6754aa003dd9f48b",
+                "point": 0,
+                "name": {
+                    "tr": "Kapılan Sipariş",
+                    "en": "Extended Regions (Help)"
+                }
+            }
+        ],
+        "warehouseName": "Burak Depo PROD_ID"
+    },
+    {
+        "warehouseId": "61656107fa2d653d59ea1b82",
+        "franchiseId": "61b668adf735e340ae8b59b9",
+        "previousRank": 203,
+        "currentRank": 203,
+        "letterGrade": "A+",
+        "dayCount": 553,
+        "totalPoint": 396710,
+        "pointsToBeDeletedNextDay": 0,
+        "criterionPoints": []
+    }
 ]

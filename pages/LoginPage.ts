@@ -12,12 +12,9 @@ test('Login into Test', async ({ page }) => {
     // Verify successful login
     await expect(page.locator('#login-message')).toBeVisible()
 })*/
-import {Page} from '@playwright/test';
+import { Page } from '@playwright/test';
 
-export async function goTo(
-    page: Page,
-    url: any
-): Promise<void> {
+export async function goTo(page: Page, url: any): Promise<void> {
     await page.goto(url);
 }
 
@@ -28,4 +25,3 @@ export async function sigIn(username: string, password: string) {
 }
 
 //export default {login, sigIn};
-

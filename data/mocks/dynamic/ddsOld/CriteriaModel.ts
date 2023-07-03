@@ -1,5 +1,4 @@
-import {faker} from "@faker-js/faker";
-
+import { faker } from '@faker-js/faker';
 
 export class CriteriaModel {
     criterionCount: number;
@@ -13,37 +12,41 @@ export class CriteriaModel {
     constructor(
         id: string = faker.datatype.string(30),
         criterionCount: number = faker.datatype.number(1000),
-        name: NameClass = {"tr": faker.datatype.string(30), "en": faker.datatype.string(30)},
+        name: NameClass = { tr: faker.datatype.string(30), en: faker.datatype.string(30) },
         options: any[] = [],
-        ruleVariables: RuleVariable[] = [{
-            "variableName": faker.datatype.string(30),
-            "name": {"tr": faker.datatype.string(30), "en": faker.datatype.string(30)},
-            "type": faker.datatype.string(30)
-        }],
+        ruleVariables: RuleVariable[] = [
+            {
+                variableName: faker.datatype.string(30),
+                name: { tr: faker.datatype.string(30), en: faker.datatype.string(30) },
+                type: faker.datatype.string(30)
+            }
+        ],
         defaultRule: DefaultRule = {
-            "name": faker.datatype.string(30),
-            "pointPerOccurrence": faker.datatype.number(1000),
-            "conditions": [
+            name: faker.datatype.string(30),
+            pointPerOccurrence: faker.datatype.number(1000),
+            conditions: [
                 {
-                    "variableName": VariableName.Hour,
-                    "operation": Operation.Gte,
-                    "value": faker.datatype.float(1000)
+                    variableName: VariableName.Hour,
+                    operation: Operation.Gte,
+                    value: faker.datatype.float(1000)
                 }
             ]
         },
-        rules: Rule[] = [{
-            "pointPerOccurrence": 0,
-            "name": NameEnum.HaftaiçiPrimeTimeKırmızıSepetHatası,
-            "validFrom": faker.datatype.number(1000),
-            "validUntil": faker.datatype.number(1000),
-            "conditions": [
-                {
-                    "variableName": faker.datatype.string(30),
-                    "operation": Operation.Gte,
-                    "value": faker.datatype.number(1000)
-                }
-            ]
-        }]
+        rules: Rule[] = [
+            {
+                pointPerOccurrence: 0,
+                name: NameEnum.HaftaiçiPrimeTimeKırmızıSepetHatası,
+                validFrom: faker.datatype.number(1000),
+                validUntil: faker.datatype.number(1000),
+                conditions: [
+                    {
+                        variableName: faker.datatype.string(30),
+                        operation: Operation.Gte,
+                        value: faker.datatype.number(1000)
+                    }
+                ]
+            }
+        ]
     ) {
         this.criterionCount = criterionCount;
         this._id = id;
@@ -63,7 +66,7 @@ export class CriteriaModel {
             ruleVariables: this.ruleVariables,
             defaultRule: this.defaultRule,
             rules: this.rules
-        }
+        };
     }
 }
 
@@ -80,18 +83,17 @@ export interface DefaultRuleCondition {
 }
 
 export enum Operation {
-    Between = "between",
-    Gte = "gte",
-    Lt = "lt",
+    Between = 'between',
+    Gte = 'gte',
+    Lt = 'lt'
 }
 
 export enum VariableName {
-    Compliance = "compliance",
-    CourierPlan = "courier_plan",
-    Hour = "hour",
-    WeekDay = "week_day",
+    Compliance = 'compliance',
+    CourierPlan = 'courier_plan',
+    Hour = 'hour',
+    WeekDay = 'week_day'
 }
-
 
 export interface NameClass {
     tr: string;
@@ -119,6 +121,6 @@ export interface RuleCondition {
 }
 
 export enum NameEnum {
-    HaftaiçiPrimeTimeKırmızıSepetHatası = "Haftaiçi Prime Time Kırmızı Sepet Hatası",
-    HaftasonuKırmızıSepetHatası = "Haftasonu Kırmızı Sepet Hatası",
+    HaftaiçiPrimeTimeKırmızıSepetHatası = 'Haftaiçi Prime Time Kırmızı Sepet Hatası',
+    HaftasonuKırmızıSepetHatası = 'Haftasonu Kırmızı Sepet Hatası'
 }
