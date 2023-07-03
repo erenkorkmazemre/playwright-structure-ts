@@ -28,7 +28,7 @@ export class SummaryModel {
             "franchiseId": "5e0d8a1df0f1d572ab399aaa",
             "kdsPoints": faker.datatype.number(1000),
             "warehouseId": "5e70b7f7ceb001bd49134d73",
-            "warehouseName": faker.random.words(5)
+            "warehouseName": faker.random.words(3)
         }],
         status: number = 200,
         total: number = faker.datatype.number(1000),
