@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "npx playwright test",
-        "prettier": "npx prettier ./ --write & npx playwright test qas.spec.ts --ui",
+        "prettier": "npx prettier ./ --write",
         "start:ui": "npx prettier ./ --write & npx playwright test --ui",
         "start:ui:debug": "npx prettier ./ --write & npx playwright test --ui --debug",
         "start:login:debug": "npx prettier ./ --write & npx playwright test login.spec.ts --ui --debug",
