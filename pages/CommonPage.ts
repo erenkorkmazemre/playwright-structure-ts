@@ -3,7 +3,7 @@ import { LOGIN } from '@locators/loginLocators';
 import { SummaryModel } from '@data/mocks/dynamic/qas/Summary';
 
 export async function click(stepDescription: string, page: Page, locator: string): Promise<void> {
-    await expect(page.locator(locator)).toBeVisible({ timeout: 5000 })
+    await expect(page.locator(locator)).toBeVisible({ timeout: 5000 });
     await page.click(locator);
     console.log(stepDescription);
 }
@@ -15,8 +15,8 @@ export async function assertContainText(
     locator,
     value: any
 ): Promise<void> {
-    await expect(page.locator(locator)).toBeVisible({ timeout: 5000 })
-    await expect(page.locator(locator)).toContainText(value)
+    await expect(page.locator(locator)).toBeVisible({ timeout: 5000 });
+    await expect(page.locator(locator)).toContainText(value);
     console.log(stepDescription);
 }
 
@@ -27,7 +27,7 @@ export async function fillTheInput(
     locator,
     value: any
 ): Promise<void> {
-    await expect(page.locator(locator)).toBeVisible({ timeout: 5000 })
+    await expect(page.locator(locator)).toBeVisible({ timeout: 5000 });
     await page.locator(locator).fill(value);
     console.log(stepDescription);
 }

@@ -3,7 +3,7 @@ import { goTo } from '@pages/LoginPage';
 import { click, fillTheInput } from '@pages/CommonPage';
 import { LOGIN } from '@locators/loginLocators';
 import { faker } from '@faker-js/faker';
-import { User } from '@tests/types/User';
+import { User } from 'tests/types/User';
 
 test.describe('Try to login then check failure and success', async () => {
     test('Login with success', async ({ page }) => {
