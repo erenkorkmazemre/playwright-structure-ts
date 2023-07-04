@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
-import { goTo } from '@pages/LoginPage';
-import { click, fillTheInput } from '@pages/CommonPage';
+import { goTo } from '@actions/pages/LoginPage';
+import { click, fillTheInput } from '@actions/pages/CommonPage';
 import { LOGIN } from '@locators/loginLocators';
 import { faker } from '@faker-js/faker';
 import { User } from 'tests/types/User';

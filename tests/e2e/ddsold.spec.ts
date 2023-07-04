@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
-import { goTo } from '@pages/LoginPage';
-import { click, fillTheInput } from '@pages/CommonPage';
+import { goTo } from '@actions/pages/LoginPage';
+import { click, fillTheInput } from '@actions/pages/CommonPage';
 import { LOGIN } from '@locators/loginLocators';
 import { CriteriaModel } from '@data/mocks/dynamic/ddsOld/CriteriaModel';
 import { EX2, EX3 } from '@data/mocks/dynamic/ddsOld/DynamicExamples';
