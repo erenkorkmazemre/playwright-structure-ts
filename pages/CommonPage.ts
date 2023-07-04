@@ -1,9 +1,22 @@
-import { Page } from '@playwright/test';
+import { Page, expect } from '@playwright/test';
 import { LOGIN } from '@locators/loginLocators';
 import { SummaryModel } from '@data/mocks/dynamic/qas/Summary';
 
-export async function click(stepDescription: string, page: Page, selector: string): Promise<void> {
-    await page.click(selector);
+export async function click(stepDescription: string, page: Page, locator: string): Promise<void> {
+    await expect(page.locator(locator)).toBeVisible({ timeout: 5000 })
+    await page.click(locator);
+    console.log(stepDescription);
+}
+
+//Assert contain text
+export async function assertContainText(
+    stepDescription: string,
+    page: Page,
+    locator,
+    value: any
+): Promise<void> {
+    await expect(page.locator(locator)).toBeVisible({ timeout: 5000 })
+    await expect(page.locator(locator)).toContainText(value)
     console.log(stepDescription);
 }
 
@@ -14,6 +27,7 @@ export async function fillTheInput(
     locator,
     value: any
 ): Promise<void> {
+    await expect(page.locator(locator)).toBeVisible({ timeout: 5000 })
     await page.locator(locator).fill(value);
     console.log(stepDescription);
 }
@@ -52,7 +66,43 @@ export async function clickTheElement(
     locator,
     value: any
 ): Promise<void> {
+    await expect(locator).toBeEnabled();
     await page.locator(locator).click();
+    console.log(stepDescription);
+}
+
+//Right Click the element
+export async function rightClickTheElement(
+    stepDescription: string,
+    page: Page,
+    locator,
+    value: any
+): Promise<void> {
+    await expect(locator).toBeEnabled();
+    await page.locator(locator).click({ button: 'right' });
+    console.log(stepDescription);
+}
+
+//Shift + Click the element
+export async function shiftClickTheElement(
+    stepDescription: string,
+    page: Page,
+    locator,
+    value: any
+): Promise<void> {
+    await expect(locator).toBeEnabled();
+    await page.locator(locator).click({ modifiers: ['Shift'] });
+    console.log(stepDescription);
+}
+
+// Hover over element
+export async function hoverTheElement(
+    stepDescription: string,
+    page: Page,
+    locator,
+    value: any
+): Promise<void> {
+    await page.locator(locator).hover();
     console.log(stepDescription);
 }
 
@@ -63,7 +113,19 @@ export async function forceClickTheElement(
     locator,
     value: any
 ): Promise<void> {
-    await page.locator(locator).click();
+    await expect(locator).toBeEnabled();
+    await page.locator(locator).click({ force: true });
+    console.log(stepDescription);
+}
+
+// Hit Enter
+export async function hitEnterTheElement(
+    stepDescription: string,
+    page: Page,
+    locator,
+    value: any
+): Promise<void> {
+    await page.locator(locator).press('Enter');
     console.log(stepDescription);
 }
 
@@ -74,17 +136,7 @@ export async function doubleClickTheElement(
     locator,
     value: any
 ): Promise<void> {
-    await page.locator(locator).click();
-    console.log(stepDescription);
-}
-
-//Submits on element with given element
-export async function submitTheElementWithGivenElement(
-    stepDescription: string,
-    page: Page,
-    locator,
-    value: any
-): Promise<void> {
+    await expect(locator).toBeEnabled();
     await page.locator(locator).click();
     console.log(stepDescription);
 }

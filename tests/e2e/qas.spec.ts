@@ -31,6 +31,6 @@ test.describe('QAS check mocking', async () => {
             page,
             QAS_ENDPOINT.SUMMARY
         );
-        await page.waitForTimeout(10000);
+        await page.waitForTimeout(20000);
     });
 });
