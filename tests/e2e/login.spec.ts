@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test';
 import { goTo } from '@actions/pages/LoginPage';
 import { click, fillTheInput } from '@actions/pages/CommonPage';
 import { LOGIN } from '@locators/loginLocators';
+import { URL } from '@utils/urls/franchise';
 import { faker } from '@faker-js/faker';
 import { User } from 'tests/types/User';
 
@@ -11,7 +12,7 @@ test.describe('Try to login then check failure and success', async () => {
         await fillTheInput('Fill the username input', page, LOGIN.USERNAME, process.env.USERNAME);
         await fillTheInput('Fill the password input', page, LOGIN.PASSWORD, process.env.PASSWORD);
         await click('Click the submit button', page, LOGIN.SUBMIT_BUTTON);
-        await expect(page).toHaveURL('https://franchise.develop.getirapi.com/map/live');
+        await expect(page).toHaveURL(URL.LIVE);
         /** Under the below includes API request && response process **/
         const response = await page.request.post(
             'https://franchise-api-gateway.development.getirapi.com/auth/login',
