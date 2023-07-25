@@ -31,9 +31,9 @@ async function hasYarn() {
 if (process.argv.length < 3) {
   console.log('Please specify the target project directory.');
   console.log('For example:');
-  console.log('    npx create-playwright-structure-ts my-app');
+  console.log('    npx playwright-structure-ts my-app');
   console.log('    OR');
-  console.log('    npm init create-playwright-structure-ts my-app');
+  console.log('    npm init playwright-structure-ts my-app');
   process.exit(1);
 }
 
@@ -85,9 +85,6 @@ async function setup() {
     await runCmd('npx rimraf ./.git');
 
     // Remove extra files
-    fs.unlinkSync(path.join(appPath, 'CHANGELOG.md'));
-    fs.unlinkSync(path.join(appPath, 'CODE_OF_CONDUCT.md'));
-    fs.unlinkSync(path.join(appPath, 'CONTRIBUTING.md'));
     fs.unlinkSync(path.join(appPath, 'bin', 'createPlaywrightStructureTS.js'));
     fs.rmdirSync(path.join(appPath, 'bin'));
     if (!useYarn) {

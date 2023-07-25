@@ -7,7 +7,7 @@ A brief description of what this project does and who it's for
 To create a project, simply run:
 
 ```bash
-npx create-playwright-structure-ts <project-name>
+npx playwright-structure-ts <project-name>
 ```
 
 Or
