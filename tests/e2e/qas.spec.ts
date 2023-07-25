@@ -17,7 +17,10 @@ import { TUTORIAL } from '@utils/endpoints/tutorial';
 import { Tutorial } from '@data/mocks/dynamic/tutorial/Tutorial';
 
 const mockedSummaryResponse = JSON.parse(
-    fs.readFileSync(path.join(__dirname, '../../data/mocks/static/contactList/contact.json'), 'utf-8')
+    fs.readFileSync(
+        path.join(__dirname, '../../data/mocks/static/contactList/contact.json'),
+        'utf-8'
+    )
 );
 test.beforeEach(async ({ page }) => {
     await goTo(page, process.env.URL);
