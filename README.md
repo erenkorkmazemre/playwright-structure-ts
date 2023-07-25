@@ -259,7 +259,7 @@ To maintain a consistent coding style across different IDEs, the project contain
 ## Authors
 
 -   [Github](https://github.com/erenkorkmazemre)
--   [Website](erenemrekorkmaz.com)
+-   [Website](https://erenemrekorkmaz.com/)
 
 ## Badges
 
