@@ -6,7 +6,8 @@
             "@tests/*": ["tests/*"],
             "@utils/*": ["utils/*"],
             "@data/*": ["data/*"],
-            "@locators/*": ["locators/*"]
+            "@locators/*": ["locators/*"],
+            "@server-app/*": ["server-app/*"]
         }
     }
 }
