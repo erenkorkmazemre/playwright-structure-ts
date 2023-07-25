@@ -2,7 +2,7 @@
     "name": "playwright-structure-ts",
     "version": "1.0.5",
     "description": "Create a Playwright app for building env-ready",
-    "bin": "bin/createNodejsApp.js",
+    "bin": "bin/createPlaywrightStructureTS.js",
     "main": "server.js",
     "repository": "https://github.com/erenkorkmazemre/playwright-structure-ts",
     "author": "Eren Emre Korkmaz <erenkorkmazemre@gmail.com>",
