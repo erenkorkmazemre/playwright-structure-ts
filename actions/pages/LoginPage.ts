@@ -9,4 +9,3 @@ export async function sigIn(username: string, password: string) {
     await this.password.type(password);
     await this.signIn.click();
 }
-

@@ -1,6 +1,6 @@
 {
     "name": "playwright-structure-ts",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "",
     "main": "server.js",
     "repository": "https://github.com/erenkorkmazemre/playwright-structure-ts",
