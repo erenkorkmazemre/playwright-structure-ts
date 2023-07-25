@@ -45,7 +45,7 @@ export default defineConfig({
     projects: [
         {
             name: 'chromium',
-            use: { ...devices['Desktop Chrome'] }
+            use: { channel: 'chrome' }
         }
 
         /** It will be open when you want to try multiple browsers **/

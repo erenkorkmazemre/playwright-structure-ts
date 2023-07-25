@@ -1,3 +1,3 @@
 export const COMMON = {
-    NOTIFICATION_BUTTON: '(//button[@type="button"]//span[text()="No"])'
+    XXX: '(//button[@type="button"]//span[text()="No"])'
 };
